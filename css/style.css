@@ -1,0 +1,938 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*=========================================================
+ ======= GLOBALES ========
+  ========================================================= */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+}
+
+h1 {
+    font-size: 3.7rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.7rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*=========================================================
+ ======= UTILIDADES ========
+  ========================================================= */
+
+.centrar-texto {
+    text-align: center;
+}
+
+.btn-primary {
+    color: #114358;
+    padding: 2rem;
+    border: 1px solid #f2AA1F;
+}
+
+.btn-secundario {
+    color: #f2AA1F;
+    padding: 2rem;
+    border: 1px solid #114358;
+}
+
+
+/*=========================================================
+ ======= HEADER ========
+  ========================================================= */
+
+header .barra {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 10rem;
+}
+
+.barra .logo {
+    align-items: center;
+    border: .3rem solid #000;
+    background-color: #114358ed;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    position: relative;
+    padding: 3rem 1rem;
+    height: auto;
+}
+
+.barra .logo h2 {
+    color: #fff;
+    transition: all 1s;
+}
+
+.barra .logo h2:hover {
+    color: #f2AA1F;
+    transform: perspective(30rem) scale(1.2) translateX(-1%) rotateY(40deg);
+}
+
+.barra .logo span {
+    color: #fff;
+    font-size: 4rem;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    z-index: 1;
+}
+
+.barra .logo span:hover,
+.barra .logo span:active,
+.barra .logo span:focus {
+    color: #F2AA1F;
+    transition: all 1s;
+}
+
+.barra .logo span:nth-child(3) {
+    color: #fff;
+    font-size: 4rem;
+    position: absolute;
+    top: 30%;
+    right: 11%;
+    opacity: 0;
+    z-index: 0;
+}
+
+@media (min-width: 992px) {
+    .barra .logo {
+        flex-basis: 30%;
+    }
+    .barra .logo h2 {
+        transform: translateX(7%);
+        margin-left: 2.2rem;
+    }
+    .barra .logo span {
+        display: none;
+    }
+}
+
+.barra nav {
+    background-color: #114358ed;
+    border: .3rem solid #000;
+    flex-basis: 100%;
+    text-align: right;
+    max-height: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+@media (min-width: 992px) {
+    .barra nav {
+        background-color: #fff;
+        align-items: center;
+        display: flex;
+        flex-basis: 70%;
+        justify-content: flex-end;
+        opacity: 1;
+        padding: 4.8rem;
+        height: 100%;
+        z-index: 0;
+    }
+}
+
+.barra nav a {
+    color: white;
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all .5s;
+    width: 100%;
+}
+
+.barra nav a:active,
+.barra nav a:hover {
+    color: #F2AA1F;
+    transform: scale(1.3);
+}
+
+@media (min-width: 992px) {
+    .barra nav a {
+        border: none;
+        color: #000;
+        display: inline-block;
+        margin-right: 0;
+        padding: 0;
+        text-align: right;
+        width: 30%;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN FOTO CRIS ========
+  ========================================================= */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .foto-cris {
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    flex-basis: 100%;
+}
+
+main .foto-cris img {
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    main .foto-cris {
+        border: .3rem solid #000;
+        flex-basis: 45%;
+        height: 110vh;
+    }
+    main .foto-cris img {
+        height: 110vh;
+        object-fit: cover;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN BIO CRIS ========
+  ========================================================= */
+
+main .bio-cris {
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    line-height: 1.4;
+    padding: 3rem;
+    text-align: center;
+}
+
+main .bio-cris h2 {
+    margin-bottom: 2rem;
+}
+
+main .bio-cris a {
+    color: black;
+    display: block;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    main .bio-cris {
+        border: .3rem solid #000;
+        flex-basis: 27.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 110vh;
+    }
+    main .bio-cris a {
+        justify-self: flex-end;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN PROYECTOS CRIS ========
+  ========================================================= */
+
+main .proyectos-cris {
+    background-color: #f1ece7;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    flex-basis: 100%;
+    padding: 4rem;
+    text-align: center;
+}
+
+main .proyectos-cris .img-proyecto {
+    border: .5rem solid #000;
+    border-radius: 10%;
+    box-shadow: inset .5rem .5rem .5rem #000;
+    margin: 0 auto 2rem auto;
+    width: 100%;
+    transition: all 1s;
+}
+
+main .proyectos-cris .img-proyecto:hover {
+    transform: scale(1.1);
+}
+
+main .proyectos-cris .img-proyecto img {
+    border-radius: 7%;
+    max-width: 100%;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+main .proyectos-cris img:hover {
+    opacity: .7;
+}
+
+main .proyectos-cris a {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    main .proyectos-cris {
+        flex-basis: 27.5%;
+        height: 110vh;
+        padding: 4rem 0;
+    }
+    main .proyectos-cris a {
+        color: rgb(0, 0, 0);
+        font-size: 2rem;
+        margin-top: 0rem;
+    }
+    main .proyectos-cris .img-proyecto {
+        width: 61%;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN PRESENTACIÓN CRIS ========
+  ========================================================= */
+
+main .presentacion-cris {
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    padding: 3rem;
+    text-align: center;
+}
+
+main .presentacion-cris a {
+    color: black;
+    display: block;
+    font-weight: 900;
+    font-size: 1.9rem;
+    margin: 2rem 0 4rem 0;
+    text-transform: uppercase;
+}
+
+main .img-presentacion {
+    box-shadow: .5rem .5rem 1.5rem #000, -.5rem -.5rem 1.5rem #000;
+    margin: 0 auto;
+    width: 90%;
+}
+
+main .img-presentacion img {
+    max-width: 100%;
+    /* cursor: pointer; */
+    transition: all 1s;
+}
+
+main .img-presentacion img:hover {
+    transform: scale(1.1);
+    border-radius: 15%;
+}
+
+@media (min-width: 992px) {
+    main .presentacion-cris {
+        border: .3rem solid #000;
+        flex-basis: 30%;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN EXPERIENCIA CRIS ========
+  ========================================================= */
+
+main .experiencia-cris {
+    background-color: #f1ece7;
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    height: 45.3rem;
+    line-height: 1.4;
+    padding: 10rem 1rem;
+    position: relative;
+    text-align: center;
+}
+
+main .experiencia-cris .experiencia-group {
+    position: absolute;
+    width: 95%;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+main .experiencia-cris .experiencia-group:first-of-type {
+    opacity: 1;
+}
+
+main .experiencia-cris .experiencia-group time {
+    font-size: 2.2rem;
+}
+
+main .experiencia-cris .experiencia-group h3 {
+    margin: 2rem 0;
+}
+
+main .experiencia-cris .experiencia-group h4 {
+    font-weight: normal;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+main .experiencia-cris .experiencia-group p {
+    margin: 1rem 0;
+}
+
+main .experiencia-cris .experiencia-group h2 {
+    color: black;
+    display: block;
+    font-weight: 900;
+    font-size: 1.9rem;
+    margin: 4rem 0 1rem 0;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    main .experiencia-cris {
+        border: .3rem solid #000;
+        flex-basis: 40%;
+        height: auto;
+        max-height: 154.5rem;
+    }
+    main .experiencia-cris .experiencia-group {
+        position: absolute;
+        top: 32%;
+    }
+}
+
+.experiencia-cris .izquierda {
+    cursor: pointer;
+    font-size: 4rem;
+    left: 5%;
+    opacity: .5;
+    position: absolute;
+    top: 50%;
+}
+
+.experiencia-cris .derecha {
+    cursor: pointer;
+    font-size: 4rem;
+    opacity: .5;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+}
+
+
+/*=========================================================
+ ======= MAIN HABILIDADES BLANDAS CRIS ========
+  ========================================================= */
+
+main .skills-mouse-cris {
+    background-color: #114358ed;
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    line-height: 1.4;
+    padding: 3rem 1rem;
+    position: relative;
+    text-align: center;
+}
+
+.skills-mouse-cris h3 {
+    display: none;
+    margin: 2rem 0;
+}
+
+.skills-mouse-cris ul {
+    padding: 5rem 2rem;
+}
+
+.skills-mouse-cris ul li {
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.skills-mouse-cris h2 {
+    display: block;
+    font-weight: 900;
+    font-size: 1.9rem;
+    margin: 4rem 0 1rem 0;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    main .skills-mouse-cris {
+        border: .3rem solid #000;
+        flex-basis: 30%;
+    }
+    .skills-mouse-cris h3 {
+        display: block;
+        margin: 2rem 0;
+    }
+    .skills-mouse-cris ul {
+        opacity: 0;
+    }
+    .skills-mouse-cris ul li {
+        opacity: 0;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN FORMACIÓN  CRIS ========
+  ========================================================= */
+
+main .formacion-cris {
+    background-color: #f1ece7;
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    line-height: 1.4;
+    padding: 3rem;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+main .formacion-cris h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    main .formacion-cris {
+        border: .3rem solid #000;
+        flex-basis: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 61vh;
+    }
+    main .formacion-cris h4 {
+        margin-top: 10rem;
+    }
+    main .formacion-cris p {
+        margin-top: 3rem;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN CODIGO LIMPIO CRIS ========
+  ========================================================= */
+
+main .codigo-limpio {
+    display: flex;
+    background-attachment: fixed;
+    background-image: url(../img/Codigo\ Limpio.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    justify-content: center;
+    line-height: 1.4;
+    height: 31vh;
+    padding: 3rem;
+    position: relative;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+main .codigo-limpio:after {
+    content: '';
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+main .codigo-limpio h2 {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    align-self: flex-end;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 992px) {
+    main .codigo-limpio {
+        flex-basis: 45%;
+        height: 61vh;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN SKILLS CRIS ========
+  ========================================================= */
+
+main .skills-cris {
+    background-color: #090909ad;
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    justify-content: center;
+    line-height: 1.4;
+    padding: 3rem;
+    text-align: center;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .skills-cris ul {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto 3rem auto;
+    flex-basis: 61%;
+}
+
+main .skills-cris ul li {
+    color: #fff;
+    list-style-image: url(../img/checks.svg);
+    list-style-position: outside;
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main .skills-cris h2 {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    main .skills-cris {
+        flex-basis: 30%;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN HOBBIE CRIS ========
+  ========================================================= */
+
+main .hobbie-cris {
+    background-image: url(../img/hobbie.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    text-align: center;
+    flex-basis: 100%;
+    height: 40vh;
+}
+
+main .hobbie-cris h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    main .hobbie-cris {
+        border: .3rem solid #000;
+        flex-basis: 27.5%;
+        height: 50vh;
+    }
+    main .hobbie-cris h2 {
+        color: #fff;
+        font-size: 2rem;
+        margin-top: 25rem;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN CONTACTAME CRIS ========
+  ========================================================= */
+
+main .contactame {
+    background-color: #f1ece7;
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    justify-content: center;
+    line-height: 1.4;
+    padding: 3rem;
+    text-align: center;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .contactame h3 {
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 992px) {
+    main .contactame {
+        border: .3rem solid #000;
+        flex-basis: 45%;
+    }
+}
+
+
+/*=========================================================
+ ======= MAIN REDES CRIS ========
+  ========================================================= */
+
+main .redes-cris {
+    background-color: #f2AA1F;
+    border-top: .3rem solid #000;
+    border-bottom: .3rem solid #000;
+    justify-content: center;
+    line-height: 1.4;
+    text-align: center;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .redes-cris a {
+    border: .3rem solid #000;
+    color: #090909;
+    display: block;
+    font-size: 4rem;
+    padding: 2rem;
+    transition: all 1s;
+}
+
+main .redes-cris a:hover {
+    opacity: .5;
+    transform: scale(1.1);
+}
+
+@media (min-width: 992px) {
+    main .redes-cris {
+        flex-basis: 27.5%;
+    }
+    main .redes-cris a {
+        border: none;
+        border-bottom: .3rem solid #000;
+    }
+    main .redes-cris a:first-of-type {
+        border-top: .3rem solid #000;
+    }
+}
+
+
+/*=========================================================
+ ======= FOOTER ========
+  ========================================================= */
+
+footer {
+    background-color: #f1ece7;
+    border-top: .3rem solid #000;
+    line-height: 1.4;
+    padding: 3rem;
+    text-align: center;
+}
+
+
+/*=========================================================
+ ======= PÁGINAS INTERNAS ========
+  ========================================================= */
+
+
+/*=========================================================
+ ======= PÁGINAS INTERNAS SOBRE MÍ ========
+  ========================================================= */
+
+main .sobre-mi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 3rem;
+}
+
+main .sobre-mi .parr {
+    width: 100%;
+    margin: 2rem auto;
+    line-height: 1.4;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+main .sobre-mi .parr hr {
+    width: 77%;
+    margin: 1rem auto;
+}
+
+main .sobre-mi .parr ul {
+    margin: 1.3rem auto;
+    width: 70%;
+    font-size: 1.6rem;
+}
+
+.sobre-mi .parr a {
+    display: block;
+    margin-top: 2rem;
+    text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+    main .sobre-mi {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 3rem 7rem;
+    }
+    main .sobre-mi h2 {
+        flex-basis: 100%;
+        text-align: left;
+        padding: 0 20rem;
+    }
+    main .sobre-mi .parr {
+        flex-basis: calc(40% - 1rem);
+    }
+}
+
+
+/*=========================================================
+ ======= PÁGINAS INTERNAS SOBRE MÍ  PROYECTOS========
+  ========================================================= */
+
+main #portafolio {
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+main #portafolio .ultimos-proyectos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+#portafolio .ultimos-proyectos .proyect-group {
+    flex-basis: 100%;
+    margin: 0 auto;
+}
+
+.ultimos-proyectos .proyect-group hr {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.ultimos-proyectos .proyect-group img {
+    max-width: 100%;
+}
+
+.ultimos-proyectos .proyect-group p {
+    margin: 2rem 0;
+    font-weight: bolder;
+}
+
+.proyect-group ul {
+    margin: 0 auto;
+    width: 70%;
+    font-size: 2rem;
+}
+
+.proyect-group ul li {
+    color: #444;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.proyect-group a {
+    background-color: #090909;
+    border-radius: 10%;
+    color: #f1ece7;
+    display: block;
+    font-size: 2rem;
+    margin: 5rem auto;
+    padding: 1rem 2rem;
+    width: 30%;
+}
+
+@media (min-width: 992px) {
+    main #portafolio .ultimos-proyectos {
+        flex-direction: row;
+    }
+    #portafolio .ultimos-proyectos .proyect-group {
+        flex-basis: calc(40% - 1rem);
+    }
+}
+
+.redes-cris-interna {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.redes-cris-interna a {
+    color: #090909;
+    display: block;
+    font-size: 3rem;
+    margin-right: 2rem;
+    text-align-last: left;
+}
+
+.redes-cris-interna p {
+    flex-basis: 100%;
+    margin-top: 1rem;
+    text-align-last: left;
+    line-height: 1.4;
+}
